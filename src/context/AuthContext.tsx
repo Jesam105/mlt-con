@@ -13,19 +13,19 @@ interface AuthContextType {
 const MOCK_USERS: User[] = [
   {
     id: '1',
-    name: 'John Doe',
+    name: 'John Jones',
     email: 'john@example.com',
     role: 'military',
     partnerId: '2',
-    partnerName: 'Jane Doe'
+    partnerName: 'Jane JOnes'
   },
   {
     id: '2',
-    name: 'Jane Doe',
+    name: 'Jane Jones',
     email: 'jane@example.com',
     role: 'spouse',
     partnerId: '1',
-    partnerName: 'John Doe'
+    partnerName: 'John Jons'
   },
   {
     id: '3',
