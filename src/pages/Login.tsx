@@ -84,14 +84,14 @@ const Login: React.FC = () => {
             </Card.Body>
           </Card>
           
-          <div className="text-center mt-3 text-muted">
+          {/* <div className="text-center mt-3 text-muted">
             <p>
               For demo purposes, you can use:<br />
               Military: john@example.com<br />
               Spouse: jane@example.com<br />
               (any password will work)
             </p>
-          </div>
+          </div> */}
         </Col>
       </Row>
     </Container>
