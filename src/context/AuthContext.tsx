@@ -14,7 +14,7 @@ const MOCK_USERS: User[] = [
   {
     id: '1',
     name: 'John Jones',
-    email: 'john@example.com',
+    email: 'john@gmail.com',
     role: 'military',
     partnerId: '2',
     partnerName: 'Jane JOnes'
@@ -22,7 +22,7 @@ const MOCK_USERS: User[] = [
   {
     id: '2',
     name: 'Jane Jones',
-    email: 'jane@example.com',
+    email: 'jane@gmail.com',
     role: 'spouse',
     partnerId: '1',
     partnerName: 'John Jons'
@@ -30,7 +30,7 @@ const MOCK_USERS: User[] = [
   {
     id: '3',
     name: 'Mike Smith',
-    email: 'mike@example.com',
+    email: 'mike@gmail.com',
     role: 'military',
     partnerId: '4',
     partnerName: 'Sarah Smith'
@@ -38,7 +38,7 @@ const MOCK_USERS: User[] = [
   {
     id: '4',
     name: 'Sarah Smith',
-    email: 'sarah@example.com',
+    email: 'sarah@gmail.com',
     role: 'spouse',
     partnerId: '3',
     partnerName: 'Mike Smith'
