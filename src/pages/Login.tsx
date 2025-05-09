@@ -22,7 +22,13 @@ const Login: React.FC = () => {
       await login(email, password);
       navigate('/dashboard');
     } catch (err) {
-      setError('Failed to login. Please check your credentials.');
+      if (err instanceof Error) {
+        if (err.message === 'User not found') {
+          setError('No account found with this email address');
+        } else {
+          setError('Failed to login. Please check your credentials.');
+        }
+      }
       console.error(err);
     } finally {
       setLoading(false);
@@ -84,14 +90,14 @@ const Login: React.FC = () => {
             </Card.Body>
           </Card>
           
-          {/* <div className="text-center mt-3 text-muted">
+          <div className="text-center mt-3 text-muted">
             <p>
               For demo purposes, you can use:<br />
               Military: john@example.com<br />
               Spouse: jane@example.com<br />
               (any password will work)
             </p>
-          </div> */}
+          </div>
         </Col>
       </Row>
     </Container>

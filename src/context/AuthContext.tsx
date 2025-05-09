@@ -9,28 +9,28 @@ interface AuthContextType {
   logout: () => void;
 }
 
-// Mock users data
+// Mock users data with test accounts
 const MOCK_USERS: User[] = [
   {
     id: '1',
     name: 'John Jones',
-    email: 'john@gmail.com',
+    email: 'john@example.com',
     role: 'military',
     partnerId: '2',
-    partnerName: 'Jane JOnes'
+    partnerName: 'Jane Jones'
   },
   {
     id: '2',
     name: 'Jane Jones',
-    email: 'jane@gmail.com',
+    email: 'jane@example.com',
     role: 'spouse',
     partnerId: '1',
-    partnerName: 'John Jons'
+    partnerName: 'John Jones'
   },
   {
     id: '3',
     name: 'Mike Smith',
-    email: 'mike@gmail.com',
+    email: 'mike@example.com',
     role: 'military',
     partnerId: '4',
     partnerName: 'Sarah Smith'
@@ -38,7 +38,7 @@ const MOCK_USERS: User[] = [
   {
     id: '4',
     name: 'Sarah Smith',
-    email: 'sarah@gmail.com',
+    email: 'sarah@example.com',
     role: 'spouse',
     partnerId: '3',
     partnerName: 'Mike Smith'
@@ -71,7 +71,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
           localStorage.setItem('currentUser', JSON.stringify(user));
           resolve(user);
         } else {
-          reject(new Error('Invalid credentials'));
+          reject(new Error('User not found'));
         }
       }, 1000);
     });
